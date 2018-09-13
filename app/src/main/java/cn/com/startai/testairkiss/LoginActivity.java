@@ -89,7 +89,7 @@ public class LoginActivity extends AppCompatActivity {
 //            }
 //        });
 //        C2JavaExDevice.getInstance().setHandler(mHandler);
-        StartaiAirkissManager.getInstance().setAirKissListener(new StartaiAirkissManager.OnAirKissListener() {
+        StartaiAirkissManager.getInstance().setAirKissListener(new C2JavaExDevice.OnAirKissListener() {
             @Override
             public void onAirKissSuccess() {
                 appendLog("配置成功 用时 " + ((System.currentTimeMillis() - t) / 1000) + " s\n");
@@ -98,7 +98,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onAirKissFailed(int error) {
                 appendLog("配置失败 errorCode = " + error + "\n");
-                Java2CExDevice.stopAirKiss();
+                StartaiAirkissManager.getInstance().stopAirKiss();
             }
         });
 

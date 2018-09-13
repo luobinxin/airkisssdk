@@ -15,7 +15,7 @@ public class C2JavaExDevice {
     public static C2JavaExDevice mInstance = null;
     private static Object mLock = new byte[1];
 
-    private StartaiAirkissManager.OnAirKissListener listener;
+    private OnAirKissListener listener;
 
     private void C2JavaExDevice() {
     }
@@ -46,13 +46,13 @@ public class C2JavaExDevice {
     }
 
 
-    public void setAirKissListener(StartaiAirkissManager.OnAirKissListener listener) {
+    public void setAirKissListener(OnAirKissListener listener) {
         getInstance().listener = listener;
     }
 
-//    public static interface OnAirKissListener {
-//        void onAirKissSuccess();
-//
-//        void onAirKissFailed(int error);
-//    }
+    public static interface OnAirKissListener {
+        void onAirKissSuccess();
+
+        void onAirKissFailed(int error);
+    }
 }

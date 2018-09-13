@@ -24,18 +24,12 @@ public class StartaiAirkissManager {
     }
 
 
-    public void setAirKissListener(OnAirKissListener listener) {
+    public void setAirKissListener(C2JavaExDevice.OnAirKissListener listener) {
         C2JavaExDevice.getInstance().setAirKissListener(listener);
     }
 
     public void stopAirKiss() {
         Java2CExDevice.stopAirKiss();
-    }
-
-    public static interface OnAirKissListener {
-        void onAirKissSuccess();
-
-        void onAirKissFailed(int error);
     }
 
 }
