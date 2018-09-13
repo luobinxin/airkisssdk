@@ -8,8 +8,8 @@ android {
     defaultConfig {
         minSdkVersion 17
         targetSdkVersion 26
-        versionCode 103
-        versionName "1.0.3"
+        versionCode 104
+        versionName "1.0.4"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -42,9 +42,9 @@ publish {
     //项目名称
     artifactId = 'airkisssdk'
     //版本号
-    publishVersion = '1.0.3'
+    publishVersion = '1.0.4'
     //描述，不重要
-    desc = 'startai sdk 1.0.3'
+    desc = 'startai sdk 1.0.4'
     //网站，不重要
     website = 'https://www.startai.com.cn'
 
